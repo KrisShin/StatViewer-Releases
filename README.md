@@ -10,13 +10,13 @@ A lightweight, real-time, professional Windows hardware monitoring tool. Fully l
 - 现代界面:多套主题、卡片 / 胶囊布局、辉光 / 透明 / 缩放
 - 极简安全:完全本地运行,无广告、无遥测、无账号、无网络上传
 
-## 下载最新版 / Download Latest (v1.3.1)
+## 下载最新版 / Download Latest (v1.3.2)
 
 | 版本 Edition | 格式 Format | 架构 Arch | GitHub | Gitee |
 |---|---|---|---|---|
-| 安装版 Installer | MSI | x64 | [下载 Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-pro-x64.msi) | [下载 Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.1/StatViewer-pro-x64.msi) |
-| 安装版 Installer | MSI | x86 | [下载 Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-pro-x86.msi) | [下载 Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.1/StatViewer-pro-x86.msi) |
-| 便携版 Portable | ZIP | x64 | [下载 Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-pro-portable-x64.zip) | [下载 Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.1/StatViewer-pro-portable-x64.zip) |
-| 便携版 Portable | ZIP | x86 | [下载 Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-pro-portable-x86.zip) | [下载 Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.1/StatViewer-pro-portable-x86.zip) |
+| 安装版 Installer | MSI | x64 | [下载 Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-pro-x64.msi) | [下载 Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.2/StatViewer-pro-x64.msi) |
+| 安装版 Installer | MSI | x86 | [下载 Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-pro-x86.msi) | [下载 Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.2/StatViewer-pro-x86.msi) |
+| 便携版 Portable | ZIP | x64 | [下载 Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-pro-portable-x64.zip) | [下载 Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.2/StatViewer-pro-portable-x64.zip) |
+| 便携版 Portable | ZIP | x86 | [下载 Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-pro-portable-x86.zip) | [下载 Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.2/StatViewer-pro-portable-x86.zip) |
 
 > 历史版本与完整 Release 列表: [GitHub Releases](https://github.com/KrisShin/StatViewer-Releases/releases) · [Gitee 发布](https://gitee.com/KrisShin/stat-viewer-releases/releases)
