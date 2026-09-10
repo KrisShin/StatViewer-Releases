@@ -33,7 +33,7 @@ For complete product information, visit the official website:
 
 完整产品信息请访问官方网站：
 
-**[StatViewer Official Website](https://util.toputils.top/)**
+**[StatViewer Official Website](https://statviewer.toputils.top/)**
 
 ---
 
@@ -46,7 +46,7 @@ For complete product information, visit the official website:
 | CPU | Usage, frequency, temperature and power / 使用率、频率、温度、功耗 |
 | GPU | Usage, VRAM, frequency, temperature, power and model / 使用率、显存、频率、温度、功耗、型号 |
 | Memory | Usage, capacity, speed and modules / 内存占用、容量、速度及内存模块 |
-| Disk | Capacity, read/write speed, temperature and hardware information / 容量、读写速度、温度及硬件信息 |
+| Disk | Capacity, read/write speed, temperature and hardware information; SMART health & details when readable / 容量、读写速度、温度及硬件信息;可读取时提供 SMART 健康度与属性详情 |
 | Network | Real-time traffic for individual network adapters / 按网卡显示实时网络速率 |
 | Battery | Status, capacity and health information / 电池状态、容量及健康信息 |
 | System Power | Estimated total system power consumption / 整机功耗估算 |
@@ -65,6 +65,8 @@ For complete product information, visit the official website:
 
 - Glow, transparency and scaling  
   辉光、透明度与缩放
+- Freely draggable overlay with edge/corner snapping; position remembered per display
+  悬浮窗可自由拖拽(边缘 / 四角吸附),按显示器记忆位置
 
 - Designed for desktop and gaming scenarios  
   适用于日常桌面与游戏场景
@@ -103,6 +105,9 @@ StatViewer Pro unlocks advanced monitoring and customization features.
 | Theme switching / 主题切换 | — | ✓ |
 | Glow, opacity & scaling / 辉光、透明度与缩放 | ✓ | ✓ |
 | Hardware information / 硬件信息 | ✓ | ✓ |
+| SMART health & details (when readable) / SMART 健康度与详情(可读取时) | ✓ | ✓ |
+| Drag overlay & per-display position / 悬浮窗拖拽与按屏位置记忆 | ✓ | ✓ |
+| Announcement bar / 公告条 | — | ✓ |
 
 > Features may change as StatViewer evolves.  
 > 功能可能会随着 StatViewer 的后续版本持续更新。
@@ -198,7 +203,7 @@ For complete privacy details, please refer to the official privacy policy.
 
 完整隐私说明请参阅官方网站上的隐私政策。
 
-**[Privacy Policy / 隐私政策](https://util.toputils.top/privacy)**
+**[Privacy Policy / 隐私政策](https://statviewer.toputils.top/privacy)**
 
 ---
 
@@ -206,14 +211,14 @@ For complete privacy details, please refer to the official privacy policy.
 
 ### StatViewer Pro
 
-**Latest Release / 最新版本：`v1.3.7`**
+**Latest Release / 最新版本：`v1.3.8`**
 
 | Edition / 版本 | Format / 格式 | Architecture / 架构 | GitHub | Gitee |
 |---|---|---|---|---|
-| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-pro-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.7/StatViewer-pro-x64.msi) |
-| Installer / 安装版 | MSI | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-pro-x86.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.7/StatViewer-pro-x86.msi) |
-| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-pro-portable-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.7/StatViewer-pro-portable-x64.zip) |
-| Portable / 便携版 | ZIP | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-pro-portable-x86.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.7/StatViewer-pro-portable-x86.zip) |
+| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.3.8-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.8/StatViewer-Pro-installer-v1.3.8-x64.msi) |
+| Installer / 安装版 | MSI | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.3.8-x86.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.8/StatViewer-Pro-installer-v1.3.8-x86.msi) |
+| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.3.8-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.8/StatViewer-Pro-portable-v1.3.8-x64.zip) |
+| Portable / 便携版 | ZIP | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.3.8-x86.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.8/StatViewer-Pro-portable-v1.3.8-x86.zip) |
 
 > This repository provides the official public releases of **StatViewer Pro**.
 >
@@ -282,7 +287,7 @@ Complete release history and changelogs are available here:
 
 ## Official Links / 官方链接
 
-- **Official Website / 官方网站:** [StatViewer](https://util.toputils.top/)
+- **Official Website / 官方网站:** [StatViewer](https://statviewer.toputils.top/)
 - **Microsoft Store / Microsoft Store:** [StatViewer Standard](https://apps.microsoft.com/detail/9PPJKKZMJ9NF)
 - **GitHub Releases / GitHub 发行仓库:** [StatViewer-Releases](https://github.com/KrisShin/StatViewer-Releases)
 - **Gitee Releases / Gitee 发行仓库:** [StatViewer Releases](https://gitee.com/KrisShin/stat-viewer-releases)
@@ -316,3 +321,5 @@ StatViewer Pro 为付费版本，通过在线许可证激活与授权校验提�
 Third-party component licenses and notices are included with the corresponding release.
 
 第三方组件的许可证及相关声明包含在对应发行版本中。
+
+**[Third-Party Notices / 第三方声明 (GitHub)](https://github.com/KrisShin/StatViewer-Releases/blob/main/THIRD-PARTY-NOTICES.md)**  ·  **[Third-Party Notices / 第三方声明 (Gitee)](https://gitee.com/KrisShin/stat-viewer-releases/blob/main/THIRD-PARTY-NOTICES.md)**
