@@ -46,7 +46,7 @@ For complete product information, visit the official website:
 | CPU | Usage, frequency, temperature and power / 使用率、频率、温度、功耗 |
 | GPU | Usage, VRAM, frequency, temperature, power and model / 使用率、显存、频率、温度、功耗、型号 |
 | Memory | Usage, capacity, speed and modules / 内存占用、容量、速度及内存模块 |
-| Disk | Capacity, read/write speed, temperature and hardware information; SMART health & details when readable / 容量、读写速度、温度及硬件信息;可读取时提供 SMART 健康度与属性详情 |
+| Disk | Capacity, read/write speed, temperature and hardware information; SMART health & details when readable (NVMe requires Microsoft standard storage driver) / 容量、读写速度、温度及硬件信息;可读取时提供 SMART 健康度与属性详情(NVMe 需 Microsoft 标准存储驱动) |
 | Network | Real-time traffic for individual network adapters / 按网卡显示实时网络速率 |
 | Battery | Status, capacity and health information / 电池状态、容量及健康信息 |
 | System Power | Estimated total system power consumption / 整机功耗估算 |
@@ -105,7 +105,7 @@ StatViewer Pro unlocks advanced monitoring and customization features.
 | Theme switching / 主题切换 | — | ✓ |
 | Glow, opacity & scaling / 辉光、透明度与缩放 | ✓ | ✓ |
 | Hardware information / 硬件信息 | ✓ | ✓ |
-| SMART health & details (when readable) / SMART 健康度与详情(可读取时) | ✓ | ✓ |
+| SMART health & details (when readable; NVMe requires Microsoft standard storage driver) / SMART 健康度与详情(可读取时;NVMe 需 Microsoft 标准存储驱动) | ✓ | ✓ |
 | Drag overlay & per-display position / 悬浮窗拖拽与按屏位置记忆 | ✓ | ✓ |
 | Announcement bar / 公告条 | — | ✓ |
 
@@ -211,14 +211,14 @@ For complete privacy details, please refer to the official privacy policy.
 
 ### StatViewer Pro
 
-**Latest Release / 最新版本：`v1.3.8`**
+**Latest Release / 最新版本：`v1.3.10`**
 
 | Edition / 版本 | Format / 格式 | Architecture / 架构 | GitHub | Gitee |
 |---|---|---|---|---|
-| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.3.8-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.8/StatViewer-Pro-installer-v1.3.8-x64.msi) |
-| Installer / 安装版 | MSI | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.3.8-x86.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.8/StatViewer-Pro-installer-v1.3.8-x86.msi) |
-| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.3.8-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.8/StatViewer-Pro-portable-v1.3.8-x64.zip) |
-| Portable / 便携版 | ZIP | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.3.8-x86.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.8/StatViewer-Pro-portable-v1.3.8-x86.zip) |
+| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.3.10-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.10/StatViewer-Pro-installer-v1.3.10-x64.msi) |
+| Installer / 安装版 | MSI | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.3.10-x86.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.10/StatViewer-Pro-installer-v1.3.10-x86.msi) |
+| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.3.10-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.10/StatViewer-Pro-portable-v1.3.10-x64.zip) |
+| Portable / 便携版 | ZIP | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.3.10-x86.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.10/StatViewer-Pro-portable-v1.3.10-x86.zip) |
 
 > This repository provides the official public releases of **StatViewer Pro**.
 >
@@ -296,9 +296,9 @@ Complete release history and changelogs are available here:
 
 ## About / 关于
 
-StatViewer is an independent Windows application developed by Kris Lyu.
+StatViewer is an independent Windows application developed by two developers: [Kris Lyu](https://github.com/KrisShin) and [Elyven](https://github.com/liuyashoot).
 
-StatViewer 是由 Kris Lyu 独立开发的 Windows 应用程序。
+StatViewer 是一款独立开发的 Windows 应用程序,由 [Kris Lyu](https://github.com/KrisShin) 与 [Elyven](https://github.com/liuyashoot) 两人共同开发。
 
 **StatViewer Standard and StatViewer Pro are two editions of the same product,
 distributed through different channels with different feature sets.**
