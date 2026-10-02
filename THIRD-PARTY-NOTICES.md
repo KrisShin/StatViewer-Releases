@@ -13,12 +13,16 @@ StatViewer 为闭源商业软件。以下第三方组件随本软件分发，按
 | HidSharp | 2.6.4 | MPL-2.0 | HID 设备访问（LHM 依赖） |
 | Microsoft.Diagnostics.Tracing.TraceEvent | 3.1.19 | MIT | FPS 帧率 ETW 采集 |
 | CommunityToolkit.Mvvm | 8.4.2 | MIT | MVVM 工具 |
+| Serilog | 4.4.0 | Apache-2.0 | 结构化日志核心 |
+| Serilog.Sinks.Async | 2.1.0 | Apache-2.0 | 有界异步日志队列 |
+| Serilog.Sinks.File | 7.0.0 | Apache-2.0 | 文件写入与大小轮转 |
 | Microsoft.Extensions.\* / System.Text.Json / System.Management / System.Memory | — | MIT | 依赖注入 / 日志 / JSON / WMI |
 | PawnIO 内核驱动（独立安装器随包分发） | — | GPL-2.0-or-later + 特殊例外 | CPU 温度/功耗特权读取 |
 
 许可证全文：
 - MPL-2.0：https://www.mozilla.org/en-US/MPL/2.0/
 - MIT：https://opensource.org/license/mit/
+- Apache-2.0：https://www.apache.org/licenses/LICENSE-2.0
 - GPL-2.0：https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 ## PawnIO
@@ -76,6 +80,16 @@ Copyright (c) .NET Foundation and Contributors
 
 许可证：MIT
 源代码：https://github.com/CommunityToolkit/dotnet
+
+## Serilog 组件
+
+Copyright (c) Serilog Contributors
+
+许可证：Apache-2.0
+
+- https://github.com/serilog/serilog
+- https://github.com/serilog/serilog-sinks-async
+- https://github.com/serilog/serilog-sinks-file
 
 ## Microsoft.Extensions.\* 等 MIT 组件
 
