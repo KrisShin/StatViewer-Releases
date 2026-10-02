@@ -240,14 +240,14 @@ For complete privacy details, please refer to the official privacy policy.
 
 ### StatViewer Pro
 
-**Latest Release / 最新版本：`v1.4.0`**
+**Latest Release / 最新版本：`v1.4.1`**
 
 | Edition / 版本 | Format / 格式 | Architecture / 架构 | GitHub | Gitee |
 |---|---|---|---|---|
-| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.4.0-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.4.0/StatViewer-Pro-installer-v1.4.0-x64.msi) |
-| Installer / 安装版 | MSI | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.4.0-x86.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.4.0/StatViewer-Pro-installer-v1.4.0-x86.msi) |
-| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.4.0-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.4.0/StatViewer-Pro-portable-v1.4.0-x64.zip) |
-| Portable / 便携版 | ZIP | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.4.0-x86.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.4.0/StatViewer-Pro-portable-v1.4.0-x86.zip) |
+| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.4.1-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.4.1/StatViewer-Pro-installer-v1.4.1-x64.msi) |
+| Installer / 安装版 | MSI | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.4.1-x86.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.4.1/StatViewer-Pro-installer-v1.4.1-x86.msi) |
+| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.4.1-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.4.1/StatViewer-Pro-portable-v1.4.1-x64.zip) |
+| Portable / 便携版 | ZIP | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.4.1-x86.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.4.1/StatViewer-Pro-portable-v1.4.1-x86.zip) |
 
 > This repository provides the official public releases of **StatViewer Pro**.
 >
