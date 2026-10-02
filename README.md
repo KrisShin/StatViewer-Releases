@@ -1,7 +1,7 @@
 # StatViewer
 
-> 轻量、实时、专注的 Windows 硬件与性能监控工具。  
-> A lightweight, real-time and focused hardware & performance monitor for Windows.
+> 轻量、实时、专注的 Windows 硬件与性能监控工具。普通版完全离线；Pro 版仅在激活、授权校验、版本检查、公告拉取及用户主动使用可选邮箱账号时联网，无广告、无遥测。<br>
+> A lightweight, real-time and focused hardware & performance monitor for Windows. Standard is fully offline; Pro connects only for activation, authorization checks, version checks, announcements and optional email-account actions — no ads, no telemetry.
 
 StatViewer 通过桌面悬浮窗实时展示 CPU、GPU、内存、磁盘、网络、电池与 FPS 等关键数据，
 帮助用户直接了解计算机当前的运行状态。
@@ -43,14 +43,18 @@ For complete product information, visit the official website:
 
 | Feature / 功能 | Description / 说明 |
 |---|---|
-| CPU | Usage, frequency, temperature and power / 使用率、频率、温度、功耗 |
-| GPU | Usage, VRAM, frequency, temperature, power and model / 使用率、显存、频率、温度、功耗、型号 |
+| CPU | Usage and frequency; temperature and power (Pro) / 使用率与频率；温度与功耗（Pro） |
+| GPU | Usage, VRAM and frequency; temperature, power and model (Pro) / 使用率、显存与频率；温度、功耗与型号（Pro） |
+| iGPU | Usage, shared-memory VRAM, frequency and power (Pro), with temperature derived from CPU temperature when no sensor exists / 核显使用率、共享内存显存、频率与功耗（Pro）；无独立温度传感器时按 CPU 温度推算 |
 | Memory | Usage, capacity, speed and modules / 内存占用、容量、速度及内存模块 |
-| Disk | Capacity, read/write speed, temperature and hardware information; SMART health & details when readable (NVMe requires Microsoft standard storage driver) / 容量、读写速度、温度及硬件信息;可读取时提供 SMART 健康度与属性详情(NVMe 需 Microsoft 标准存储驱动) |
-| Network | Real-time traffic for individual network adapters / 按网卡显示实时网络速率 |
+| Disk | Capacity, read/write speed, temperature and hardware information; SMART health & details when readable (Pro; NVMe requires Microsoft standard storage driver) / 容量、读写速度、温度及硬件信息；可读取时提供 SMART 健康度与属性详情（Pro；NVMe 需 Microsoft 标准存储驱动） |
+| Network | Real-time traffic per adapter, with IPv4/IPv6 details in the Hardware Information page / 按网卡显示实时速率；硬件信息页提供 IPv4/IPv6 明细 |
 | Battery | Status, capacity and health information / 电池状态、容量及健康信息 |
-| System Power | Estimated total system power consumption / 整机功耗估算 |
-| FPS | Real-time foreground application FPS and sparkline / 前台应用实时 FPS 与迷你曲线 |
+| System Power | Estimated total system power consumption (Pro) / 整机功耗估算（Pro） |
+| FPS | Foreground-application FPS, 1% Low and sparkline (Pro; requires administrator; ETW host starts only while FPS and at least one FPS detail are enabled) / 前台应用 FPS、1% Low 与迷你曲线（Pro；需管理员；仅 FPS 与至少一个 FPS 子项启用期间启动 ETW Host） |
+| Account | Optional email account (recommended, not required), email verification, security-notification toggle, device remark and recovery / 可选邮箱账号（推荐绑定，但不强制）、邮箱验证、安全通知开关、设备备注与原邮箱恢复 |
+| Device Migration | Guided authorization migration after major hardware replacement; replacing a disk does not require migration / 更换主要硬件后可按提示迁移授权；更换硬盘不需要迁移 |
+| Update Notice | Optional update check and reminder in the About page / 关于页提供检查更新与版本提醒 |
 
 ### Desktop Overlay / 桌面悬浮窗
 
@@ -73,10 +77,15 @@ For complete product information, visit the official website:
 
 ### Hardware Information / 硬件信息
 
-StatViewer also provides a dedicated hardware information page for viewing
-the major hardware components installed in the system.
+StatViewer also provides a dedicated hardware information centre for viewing
+the system, CPU, memory, GPU, disk, network and other major hardware components.
 
-StatViewer 提供独立的硬件信息页面，用于查看计算机主要硬件组件及系统信息。
+StatViewer 提供独立的硬件信息中心，用于查看系统、CPU、内存、显卡、磁盘、网络等主要硬件组件。
+
+### System Tools & Logs / 系统工具与日志
+
+- Windows Disk Cleanup for the system drive, optionally pinned to the tray menu / 一键调起系统盘 Windows 磁盘清理，可固定到托盘菜单
+- Save the existing Serilog log files from the About page (up to 3 files) / 关于页保存现有 Serilog 日志文件（最多 3 个）
 
 ---
 
@@ -93,20 +102,27 @@ StatViewer Pro unlocks advanced monitoring and customization features.
 | CPU temperature & power / CPU 温度与功耗 | — | ✓ |
 | GPU usage, VRAM & frequency / GPU 使用率、显存与频率 | ✓ | ✓ |
 | GPU temperature, power & model / GPU 温度、功耗与型号 | — | ✓ |
+| iGPU usage, shared-memory VRAM & frequency / 核显使用率、共享内存显存与频率 | — | ✓ |
+| iGPU temperature, power & model / 核显温度、功耗与型号 | — | ✓ |
 | Memory monitoring / 内存监控 | ✓ | ✓ |
 | Disk monitoring / 磁盘监控 | ✓ | ✓ |
-| Network monitoring / 网络监控 | ✓ | ✓ |
+| Network monitoring & IPv4/IPv6 details / 网络监控与 IPv4/IPv6 明细 | ✓ | ✓ |
 | Battery monitoring / 电池监控 | ✓ | ✓ |
 | System power estimate / 整机功耗估算 | — | ✓ |
-| FPS monitoring & sparkline / FPS 监控与曲线 | — | ✓ |
+| FPS, 1% Low & sparkline / FPS、1% Low 与曲线 | — | ✓ |
+| Optional email account (recommended, not required) / 可选邮箱账号（推荐绑定，不强制） | — | ✓ |
+| Device authorization migration / 设备授权迁移 | — | ✓ |
+| Update notice / 更新提醒 | — | ✓ |
 | Card layout / 卡片布局 | ✓ | ✓ |
 | Capsule layout / 胶囊布局 | — | ✓ |
 | Default theme / 默认主题 | ✓ | ✓ |
 | Theme switching / 主题切换 | — | ✓ |
 | Glow, opacity & scaling / 辉光、透明度与缩放 | ✓ | ✓ |
-| Hardware information / 硬件信息 | ✓ | ✓ |
-| SMART health & details (when readable; NVMe requires Microsoft standard storage driver) / SMART 健康度与详情(可读取时;NVMe 需 Microsoft 标准存储驱动) | ✓ | ✓ |
+| Hardware information centre / 硬件信息中心 | ✓ | ✓ |
+| SMART health & details (Pro; NVMe requires Microsoft standard storage driver) / SMART 健康度与详情（Pro；NVMe 需 Microsoft 标准存储驱动） | — | ✓ |
 | Drag overlay & per-display position / 悬浮窗拖拽与按屏位置记忆 | ✓ | ✓ |
+| Tools: Windows Disk Cleanup & tray pin / 工具：Windows 磁盘清理与托盘固定 | ✓ | ✓ |
+| Save recent logs / 保存最近日志 | ✓ | ✓ |
 | Announcement bar / 公告条 | — | ✓ |
 
 > Features may change as StatViewer evolves.  
@@ -185,19 +201,23 @@ usage analytics or hardware monitoring data.
 
 StatViewer Pro does not collect telemetry or hardware monitoring data.
 
-Network communication is limited to functions required for license activation
-and license validation.
+Network communication is limited to license activation, authorization checks,
+version checks, announcement retrieval and optional account actions initiated
+by the user.
 
 **Pro 版不收集遥测数据，也不会上传硬件监控数据。**
 
-Pro 版仅在许可证激活与授权校验等必要场景进行网络通信。
+Pro 版仅在许可证激活、授权校验、版本检查、公告拉取及用户主动使用的可选
+邮箱账号操作中进行网络通信。
 
-During Pro activation, a device identifier derived from selected hardware
-identifiers may be used for license management. The original hardware
-serial numbers are not displayed as the Device ID.
+During Pro activation and authorization checks, StatViewer uses purpose-specific
+salted HMAC-SHA256 hashes of CPU, motherboard and boot-drive hardware serials.
+It no longer uses an Install ID or device_id. Plaintext hardware identifiers are
+neither displayed nor uploaded. The optional email account is recommended but
+not required; if used, only the email, verification state and account credential
+required for account ownership, support lookup and security notices are collected.
 
-Pro 版激活过程中可能使用基于部分硬件标识生成的设备 ID 用于授权管理。
-原始硬件序列号不会直接作为设备 ID 展示。
+Pro 版激活与授权校验使用 CPU、主板和启动盘硬件序列号的用途专属加盐 HMAC-SHA256 哈希，不再使用 Install ID 或 device_id，不展示或上传明文硬件标识。可选邮箱账号推荐绑定，但不强制；仅在用户主动使用时采集账号归属、客服定位和安全通知所需的邮箱、验证状态与账号凭据。
 
 For complete privacy details, please refer to the official privacy policy.
 
@@ -207,18 +227,27 @@ For complete privacy details, please refer to the official privacy policy.
 
 ---
 
+## Permissions / 权限说明
+
+- **Administrator privilege (optional, Pro only)**: FPS monitoring uses ETW and requires administrator privilege. Pro launches the dedicated `StatViewer.FpsHost.exe` only while FPS and at least one FPS detail are enabled; the host exits when FPS or all FPS details are disabled. Pro may also install the PawnIO kernel driver with UAC confirmation to read CPU/GPU temperature and power.
+- **管理员权限（可选，仅 Pro 版）**：FPS 监控使用 ETW，需要管理员权限。Pro 仅在 FPS 与至少一个 FPS 子项启用期间启动专用 `StatViewer.FpsHost.exe`，FPS 或全部 FPS 子项关闭后 Host 退出；Pro 也可在 UAC 确认后安装 PawnIO 内核驱动以读取 CPU/GPU 温度与功耗。
+- **Standard**: never requests elevation, never shows UAC and installs no drivers.
+- **普通版**：不请求提权、不弹出 UAC，也不安装任何驱动。
+
+---
+
 ## Download / 下载
 
 ### StatViewer Pro
 
-**Latest Release / 最新版本：`v1.3.10`**
+**Latest Release / 最新版本：`v1.4.0`**
 
 | Edition / 版本 | Format / 格式 | Architecture / 架构 | GitHub | Gitee |
 |---|---|---|---|---|
-| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.3.10-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.10/StatViewer-Pro-installer-v1.3.10-x64.msi) |
-| Installer / 安装版 | MSI | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.3.10-x86.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.10/StatViewer-Pro-installer-v1.3.10-x86.msi) |
-| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.3.10-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.10/StatViewer-Pro-portable-v1.3.10-x64.zip) |
-| Portable / 便携版 | ZIP | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.3.10-x86.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.3.10/StatViewer-Pro-portable-v1.3.10-x86.zip) |
+| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.4.0-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.4.0/StatViewer-Pro-installer-v1.4.0-x64.msi) |
+| Installer / 安装版 | MSI | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.4.0-x86.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.4.0/StatViewer-Pro-installer-v1.4.0-x86.msi) |
+| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.4.0-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.4.0/StatViewer-Pro-portable-v1.4.0-x64.zip) |
+| Portable / 便携版 | ZIP | x86 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.4.0-x86.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.4.0/StatViewer-Pro-portable-v1.4.0-x86.zip) |
 
 > This repository provides the official public releases of **StatViewer Pro**.
 >
@@ -236,10 +265,9 @@ StatViewer 普通版通过 Microsoft Store 发布，并支持商店自动更新�
 
 ## System Requirements / 系统要求
 
-- Windows 10 version 1809 or later / Windows 10 1809 或更高版本
-- Windows 11 / Windows 11
-- .NET Framework 4.8 / .NET Framework 4.8
-- x64 recommended / 推荐 x64
+- Windows 10 version 1809 or later, or Windows 11 / Windows 10 1809 或更高版本，或 Windows 11
+- .NET Framework 4.8 (bundled with Windows 10/11; no runtime installation required) / .NET Framework 4.8（Windows 10/11 自带，无需安装运行时）
+- x64 / x86 (x64 recommended) / x64 / x86（推荐 x64）
 
 ---
 
