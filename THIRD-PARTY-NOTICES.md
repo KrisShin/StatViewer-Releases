@@ -1,100 +1,45 @@
 # Third-Party Notices
 
-StatViewer 为闭源商业软件。以下第三方组件随本软件分发，按其各自许可证条款使用。
-分发本软件时须保留本文件及各组件版权声明。
+StatViewer 是一款独立开发的 Windows 桌面应用。它随包分发或在构建时使用以下
+第三方组件，各自遵循其许可证。
 
-## 组件清单
+## PawnIO 驱动安装器
 
-| 组件 | 版本 | 许可证 | 用途 |
-|---|---|---|---|
-| LibreHardwareMonitorLib | 0.9.6 | MPL-2.0 | 硬件传感器采集（CPU/GPU/主板/磁盘等） |
-| DiskInfoToolkit | 1.1.2 | MPL-2.0 | 磁盘信息（LHM 依赖） |
-| RAMSPDToolkit-NDD | 1.4.2 | MPL-2.0 | 内存 SPD 读取（LHM 依赖） |
-| HidSharp | 2.6.4 | MPL-2.0 | HID 设备访问（LHM 依赖） |
-| Microsoft.Diagnostics.Tracing.TraceEvent | 3.1.19 | MIT | FPS 帧率 ETW 采集 |
-| CommunityToolkit.Mvvm | 8.4.2 | MIT | MVVM 工具 |
-| Serilog | 4.4.0 | Apache-2.0 | 结构化日志核心 |
-| Serilog.Sinks.Async | 2.1.0 | Apache-2.0 | 有界异步日志队列 |
-| Serilog.Sinks.File | 7.0.0 | Apache-2.0 | 文件写入与大小轮转 |
-| Microsoft.Extensions.\* / System.Text.Json / System.Management / System.Memory | — | MIT | 依赖注入 / 日志 / JSON / WMI |
-| PawnIO 内核驱动（独立安装器随包分发） | — | GPL-2.0-or-later + 特殊例外 | CPU 温度/功耗特权读取 |
-
-许可证全文：
-- MPL-2.0：https://www.mozilla.org/en-US/MPL/2.0/
-- MIT：https://opensource.org/license/mit/
-- Apache-2.0：https://www.apache.org/licenses/LICENSE-2.0
-- GPL-2.0：https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-
-## PawnIO
-
-Copyright (C) 2026 namazso <admin@namazso.eu>
-
-许可证：GNU GPL v2 或（由您选择）任意更新版本，含以下特殊例外：
-
-> “作为特殊例外，PawnIO 的版权持有人允许您将 PawnIO 程序与按 GNU LGPL
-> 发布的自由软件程序或库、以及与**仅通过设备 IO 控制接口与 PawnIO 通信的
-> 独立模块**相结合。您可以按照 GNU GPL（针对 PawnIO）及其他相关代码的许可
-> 条款复制和分发此类系统，前提是当 GNU GPL 要求分发源代码时，您同时提供
-> 其他代码的源代码。”
->
-> “此例外不适用于通过 Pawn 接口与 PawnIO 通信的程序。”
-
-StatViewer 以**未修改的官方安装器**形式随包分发 PawnIO，不链接其源码/库，
-不使用 Pawn 脚本接口，属于例外条款所述的独立模块，StatViewer 自身代码
-不受 GPL 传染。
-
+- 文件：`redist/PawnIO_setup.exe`，版本随安装包
+- 版权：Copyright (C) namazso <admin@namazso.eu>
+- 许可证：**GNU GPL v2 或（由您选择）任意更新版本，含独立程序例外条款**
 - 项目主页：https://pawnio.eu
-- 源代码：https://github.com/namazso/PawnIO（按 GPL 要求，分发二进制时须提供源码获取途径）
+- 源代码：https://github.com/namazso/PawnIO
 
-## LibreHardwareMonitorLib
+StatViewer 以**未修改的官方安装器**形式随包分发 PawnIO，不链接其源码或库，
+不使用 Pawn 脚本接口，仅通过设备 I/O 控制接口与驱动通信——属于例外条款所述的
+独立程序，本程序自身代码不受 GPL 传染。
 
-Copyright (c) LibreHardwareMonitor contributors
+## PawnIO 模块
 
-许可证：MPL-2.0
-源代码：https://github.com/LibreHardwareMonitor/LibreHardwareMonitor
+- 文件：`pawnio-modules/AMDFamily17.bin`、`IntelMSR.bin`
+- 版权：Copyright (C) namazso 及 PawnIO.Modules 贡献者
+- 许可证：**GNU LGPL v2.1**
+- 来源：https://github.com/namazso/PawnIO.Modules
 
-## DiskInfoToolkit / RAMSPDToolkit-NDD
+这些模块被编译进 `StatViewer.exe`，运行时装入 PawnIO 驱动。按 LGPL 的要求，
+**其完整源代码随本仓库与每个发行版的安装包一并提供**，位于
+`pawnio-modules/source/`；`pawnio-modules/COPYING` 为其许可证全文。
 
-Copyright (c) Blacktempel
+## Rust 依赖
 
-许可证：MPL-2.0
-源代码：https://github.com/Blacktempel/DiskInfoToolkit 、 https://github.com/Blacktempel/RAMSPDToolkit
+| 组件 | 用途 | 许可证 |
+|---|---|---|
+| `windows` / `windows-numerics` | Win32、Direct2D、DirectComposition、DirectWrite、PawnIO 的接口绑定 | MIT OR Apache-2.0 |
+| `serde` / `serde_json` | 设置文件的读写 | MIT OR Apache-2.0 |
+| `embed-resource`（构建期） | 把图标、清单与版本信息写进 exe | MIT |
 
-## HidSharp
+完整的依赖树与其许可证可由 `cargo metadata` 或 `cargo deny` 复现。
 
-Copyright (c) HidSharp contributors
+## 字体
 
-许可证：MPL-2.0
-主页：https://software.seekye.com/hidsharp
+界面使用 **Microsoft YaHei UI**，为 Windows 自带的系统字体，**不随本软件分发**。
 
-## Microsoft.Diagnostics.Tracing.TraceEvent
+## 开源许可
 
-Copyright (c) Microsoft Corporation
-
-许可证：MIT
-源代码：https://github.com/microsoft/perfview
-
-## CommunityToolkit.Mvvm
-
-Copyright (c) .NET Foundation and Contributors
-
-许可证：MIT
-源代码：https://github.com/CommunityToolkit/dotnet
-
-## Serilog 组件
-
-Copyright (c) Serilog Contributors
-
-许可证：Apache-2.0
-
-- https://github.com/serilog/serilog
-- https://github.com/serilog/serilog-sinks-async
-- https://github.com/serilog/serilog-sinks-file
-
-## Microsoft.Extensions.\* 等 MIT 组件
-
-Copyright (c) Microsoft Corporation
-
-许可证：MIT
-组件包括 Microsoft.Extensions.DependencyInjection / Logging / Options、
-System.Text.Json、System.Management、System.Memory 等。
+本项目自身为闭源商业软件（普通版免费，Pro 版付费授权）。
