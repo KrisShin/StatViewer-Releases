@@ -1,13 +1,14 @@
 # StatViewer
 
-> 轻量、实时、专注的 Windows 硬件与性能监控工具。普通版完全离线；Pro 版仅在激活、授权校验、版本检查、公告拉取及用户主动使用可选邮箱账号时联网，无广告、无遥测。<br>
-> A lightweight, real-time and focused hardware & performance monitor for Windows. Standard is fully offline; Pro connects only for activation, authorization checks, version checks, announcements and optional email-account actions — no ads, no telemetry.
+> 轻量、实时、专注的 Windows 硬件与性能监控工具。普通版完全离线；Pro 版仅在激活、授权校验、版本检查、公告拉取、用户主动发起应用内更新下载及可选邮箱账号操作时联网，无广告、无遥测。<br>
+> A lightweight, real-time and focused hardware & performance monitor for Windows. Standard is fully offline; Pro connects only for activation, authorization checks, version checks, announcements, user-initiated in-app update downloads and optional email-account actions — no ads, no telemetry.
 
 StatViewer 通过桌面悬浮窗实时展示 CPU、GPU、内存、磁盘、网络、电池与 FPS 等关键数据，
-帮助用户直接了解计算机当前的运行状态。
+并提供版本亮点、镜像测速、后台下载与托盘更新入口，帮助用户直接了解计算机当前的运行状态。
 
 StatViewer provides real-time CPU, GPU, memory, disk, network, battery and FPS metrics
-in a desktop overlay, helping users understand the current state of their system.
+in a desktop overlay, together with release highlights, mirror speed tests, background
+downloads and tray update actions.
 
 **StatViewer 不做系统管家，不做自动优化建议，只专注于实时数据监控。**  
 **StatViewer is not a system manager or optimizer. It focuses on real-time monitoring.**
@@ -54,7 +55,7 @@ For complete product information, visit the official website:
 | FPS | Foreground-application FPS, 1% Low and sparkline (Pro; requires administrator; ETW host starts only while FPS and at least one FPS detail are enabled) / 前台应用 FPS、1% Low 与迷你曲线（Pro；需管理员；仅 FPS 与至少一个 FPS 子项启用期间启动 ETW Host） |
 | Account | Optional email account (recommended, not required), email verification, security-notification toggle, device remark and recovery / 可选邮箱账号（推荐绑定，但不强制）、邮箱验证、安全通知开关、设备备注与原邮箱恢复 |
 | Device Migration | Guided authorization migration after major hardware replacement; replacing a disk does not require migration / 更换主要硬件后可按提示迁移授权；更换硬盘不需要迁移 |
-| Update Notice | Optional update check and reminder in the About page / 关于页提供检查更新与版本提醒 |
+| Updates | In-app update highlights, GitHub / Gitee speed tests, progress, background downloads, tray badge and Update now (Pro) / 应用内版本亮点、GitHub / Gitee 测速、进度、后台下载、托盘提醒与“立即更新”（Pro） |
 
 ### Desktop Overlay / 桌面悬浮窗
 
@@ -67,8 +68,11 @@ For complete product information, visit the official website:
 - Multiple theme presets  
   多套主题预设
 
-- Glow, transparency and scaling  
-  辉光、透明度与缩放
+- Glow, transparency, independent text scaling and panel scale up to 3.0<br>
+  辉光、透明度、独立文字缩放与最高 3.0 的面板缩放
+
+- Uniform 2% slider precision and per-item taskbar overflow<br>
+  滑动条统一 2% 行程精度，任务栏空间不足时按子项截断
 - Freely draggable overlay with edge/corner snapping; position remembered per display
   悬浮窗可自由拖拽(边缘 / 四角吸附),按显示器记忆位置
 
@@ -86,6 +90,8 @@ StatViewer 提供独立的硬件信息中心，用于查看系统、CPU、内存
 
 - Windows Disk Cleanup for the system drive, optionally pinned to the tray menu / 一键调起系统盘 Windows 磁盘清理，可固定到托盘菜单
 - Save the log files from the About page for troubleshooting / 关于页可直接导出日志文件，便于反馈排障
+- In-app updates with release highlights, mirror speed tests, progress and background download / 应用内更新提供版本亮点、镜像测速、进度与后台下载
+- Windows screenshot and screen-recording compatibility / 兼容 Windows 截图与录屏
 
 ---
 
@@ -112,15 +118,17 @@ StatViewer Pro unlocks advanced monitoring and customization features.
 | FPS, 1% Low & sparkline / FPS、1% Low 与曲线 | — | ✓ |
 | Optional email account (recommended, not required) / 可选邮箱账号（推荐绑定，不强制） | — | ✓ |
 | Device authorization migration / 设备授权迁移 | — | ✓ |
-| Update notice / 更新提醒 | — | ✓ |
+| In-app updates / 应用内更新（测速、亮点、后台下载、托盘提醒） | — | ✓ |
 | Card layout / 卡片布局 | ✓ | ✓ |
 | Capsule layout / 胶囊布局 | — | ✓ |
 | Default theme / 默认主题 | ✓ | ✓ |
 | Theme switching / 主题切换 | — | ✓ |
-| Glow, opacity & scaling / 辉光、透明度与缩放 | ✓ | ✓ |
+| Glow, opacity, panel scale & independent text scale / 辉光、透明度、面板缩放与独立文字缩放 | ✓ | ✓ |
+| 2% slider precision & per-item taskbar overflow / 2% 滑杆精度与任务栏子项截断 | ✓ | ✓ |
 | Hardware information centre / 硬件信息中心 | ✓ | ✓ |
 | SMART health & details (Pro; NVMe requires Microsoft standard storage driver) / SMART 健康度与详情（Pro；NVMe 需 Microsoft 标准存储驱动） | — | ✓ |
 | Drag overlay & per-display position / 悬浮窗拖拽与按屏位置记忆 | ✓ | ✓ |
+| Reorder panel readings by drag / 面板读数拖拽排序 | ✓ | ✓ |
 | Tools: Windows Disk Cleanup & tray pin / 工具：Windows 磁盘清理与托盘固定 | ✓ | ✓ |
 | Save recent logs / 保存最近日志 | ✓ | ✓ |
 | Announcement bar / 公告条 | — | ✓ |
@@ -202,13 +210,13 @@ usage analytics or hardware monitoring data.
 StatViewer Pro does not collect telemetry or hardware monitoring data.
 
 Network communication is limited to license activation, authorization checks,
-version checks, announcement retrieval and optional account actions initiated
-by the user.
+version checks, announcement retrieval, user-initiated in-app update downloads
+and optional account actions initiated by the user.
 
 **Pro 版不收集遥测数据，也不会上传硬件监控数据。**
 
-Pro 版仅在许可证激活、授权校验、版本检查、公告拉取及用户主动使用的可选
-邮箱账号操作中进行网络通信。
+Pro 版仅在许可证激活、授权校验、版本检查、公告拉取、用户主动发起的应用内
+更新下载及可选邮箱账号操作中进行网络通信。
 
 During Pro activation and authorization checks, StatViewer uses purpose-specific
 salted HMAC-SHA256 hashes of CPU, motherboard and boot-drive hardware serials.
@@ -240,15 +248,15 @@ For complete privacy details, please refer to the official privacy policy.
 
 ### StatViewer Pro
 
-**Latest Release / 最新版本：`v1.5.1.1`**
+**Latest Release / 最新版本：`v1.5.2`**
 
 | Edition / 版本 | Format / 格式 | Architecture / 架构 | GitHub | Gitee |
 |---|---|---|---|---|
-| Installer / 安装版 | NSIS | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro_1.5.1.1_x64-setup.exe) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.1.1/StatViewer-Pro_1.5.1.1_x64-setup.exe) |
-| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.5.1.1-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.1.1/StatViewer-Pro-installer-v1.5.1.1-x64.msi) |
-| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.5.1.1-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.1.1/StatViewer-Pro-portable-v1.5.1.1-x64.zip) |
+| Installer / 安装版 | NSIS | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.5.2-x64.exe) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.2/StatViewer-Pro-installer-v1.5.2-x64.exe) |
+| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.5.2-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.2/StatViewer-Pro-installer-v1.5.2-x64.msi) |
+| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.5.2-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.2/StatViewer-Pro-portable-v1.5.2-x64.zip) |
 
-**SHA256 Checksums / SHA256 校验文件：** [GitHub](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/SHA256SUMS-Pro.txt) · [Gitee](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.1.1/SHA256SUMS-Pro.txt)
+**SHA256 Checksums / SHA256 校验文件：** [GitHub](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/SHA256SUMS-Pro.txt) · [Gitee](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.2/SHA256SUMS-Pro.txt)
 
 ### Verify Downloads / 校验下载
 
@@ -257,7 +265,7 @@ Each public Pro package has an accompanying `.sha256` file, and all hashes are a
 每个公开 Pro 安装包都附带 `.sha256` 文件，所有哈希也会汇总到 `SHA256SUMS-Pro.txt`。可使用 PowerShell 计算下载文件的哈希并与官方校验文件对比；哈希一致即可确认该文件与官方仓库公开发布的文件相同，与下载渠道无关。
 
 ```powershell
-Get-FileHash .\StatViewer-Pro_v1.5.1.1_x64-setup.exe -Algorithm SHA256
+Get-FileHash .\StatViewer-Pro-installer-v1.5.2-x64.exe -Algorithm SHA256
 ```
 
 > This repository provides the official public releases of **StatViewer Pro**.
@@ -290,9 +298,9 @@ Download the NSIS or MSI package and run the installer.
 
 下载 NSIS 或 MSI 安装包并运行安装程序。
 
-The installer provides Start Menu and Desktop shortcuts.
+The installer provides Start Menu and Desktop shortcuts. Pro also supports in-app speed-tested updates with progress, background downloads and tray reminders.
 
-安装程序会创建开始菜单与桌面快捷方式。
+安装程序会创建开始菜单与桌面快捷方式。Pro 还支持应用内测速更新、进度显示、后台下载与托盘提醒。
 
 ### Pro Portable / Pro 便携版
 
