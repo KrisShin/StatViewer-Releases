@@ -32,6 +32,9 @@ StatViewer 以**未修改的官方安装器**形式随包分发 PawnIO，不链�
 |---|---|---|
 | `windows` / `windows-numerics` | Win32、Direct2D、DirectComposition、DirectWrite、PawnIO 的接口绑定 | MIT OR Apache-2.0 |
 | `serde` / `serde_json` | 设置文件的读写 | MIT OR Apache-2.0 |
+| `zip` | 便携版在线更新包的原生 ZIP 读取 | MIT |
+| `flate2` / `crc32fast` / `typed-path` | ZIP 的 Deflate 解压、校验与路径处理 | MIT OR Apache-2.0 |
+| `zlib-rs` | Deflate 解压后端 | Zlib |
 | `embed-resource`（构建期） | 把图标、清单与版本信息写进 exe | MIT |
 
 完整的依赖树与其许可证可由 `cargo metadata` 或 `cargo deny` 复现。
