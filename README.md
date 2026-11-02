@@ -4,14 +4,50 @@
 > A lightweight, real-time and focused hardware & performance monitor for Windows. Standard is fully offline; Pro connects only for activation, authorization checks, version checks, announcements, user-initiated in-app update downloads and optional email-account actions — no ads, no telemetry.
 
 StatViewer 通过桌面悬浮窗实时展示 CPU、GPU、内存、磁盘、网络、电池与 FPS 等关键数据，
-并提供版本亮点、镜像测速、后台下载与托盘更新入口，帮助用户直接了解计算机当前的运行状态。
+支持卡片、胶囊、任务栏与极简 HUD 四种显示模式，并提供可搜索的键盘操作设置、版本亮点、镜像测速、后台下载与托盘更新入口。
 
 StatViewer provides real-time CPU, GPU, memory, disk, network, battery and FPS metrics
-in a desktop overlay, together with release highlights, mirror speed tests, background
-downloads and tray update actions.
+in a desktop overlay, with card, capsule, taskbar and Minimal HUD display modes, keyboard-searchable
+settings, release highlights, mirror speed tests, background downloads and tray update actions.
 
 **StatViewer 不做系统管家，不做自动优化建议，只专注于实时数据监控。**  
 **StatViewer is not a system manager or optimizer. It focuses on real-time monitoring.**
+
+## Recent Updates / 近期更新
+
+### v1.5.3
+
+**中文**
+
+- 新增「极简 HUD」：单行显示，最多固定 3 个硬件，其余项目每 5 秒轮播；点击展开完整看板，设置窗口和托盘菜单均可切换。
+- 设置窗口新增搜索与完整键盘操作：`Ctrl+K` 搜索，`Tab` / `Shift+Tab` 移动焦点，方向键调整选项，`Space` / `Enter` 确认。
+- 重新整理设置与布局：显示模式位于监控页顶部，面板顺序支持跨行拖拽；新增默认开启的「永久置顶」和处理器精简型号。
+- 提升非午夜主题的次要文字对比度，修正圆 `i` 提示和滑杆轨道交互；Explorer 重启后自动恢复托盘图标。
+- 修复滑杆最小显示单位、显示模式切换位置跳动、默认顺序、面板宽度调整崩溃及游戏全屏位置错位。
+- Pro：任务栏默认位置避开开始按钮、应用图标和系统托盘；NSIS 覆盖安装沿用已有路径，改进目录切换、非安全目录确认和免 UAC 提权任务处理。
+
+**English**
+
+- Added Minimal HUD: one row with up to three pinned hardware items, rotating the rest every five seconds; click to expand, and switch layouts from Settings or the tray.
+- Added Settings search and full keyboard control: `Ctrl+K`, `Tab` / `Shift+Tab`, arrow-key choices and `Space` / `Enter` confirmation.
+- Reorganized Settings and layout controls: display mode is at the top of Monitoring, panel ordering supports cross-row drag, and always-on-top plus short processor model options are available.
+- Improved secondary-text contrast, round-`i` tooltips and slider-track interaction in non-Midnight themes; the tray icon is restored after Explorer restarts.
+- Fixed minimum slider steps, panel jumps when switching modes, default ordering, width-resize crashes and overlay placement after fullscreen resolution changes.
+- Pro: taskbar placement avoids Start, app icons and the system tray; NSIS upgrades reuse the existing path and improve directory changes, unsafe-folder confirmation and no-UAC elevation-task handling.
+
+### v1.5.2
+
+**中文**
+
+- 新增应用内更新、面板读数拖拽排序、亮背景自动适配、面板缩放至 3.0 与独立文字缩放。
+- 改善全屏游戏、Windows 截图/录屏兼容与任务栏主题及溢出布局。
+- 首次安装默认开启开机自启，并优化首次启动位置与弹窗交互。
+
+**English**
+
+- Added in-app updates, drag-to-reorder readings, light-background adaptation, panel scale up to 3.0 and independent text scaling.
+- Improved fullscreen-game compatibility, Windows screenshot and screen-recording behaviour, and taskbar theming and overflow layout.
+- Fresh installs now enable autostart by default, with improved first-run placement and dialog interaction.
 
 ---
 
@@ -44,7 +80,7 @@ For complete product information, visit the official website:
 
 | Feature / 功能 | Description / 说明 |
 |---|---|
-| CPU | Usage and frequency; temperature and power (Pro) / 使用率与频率；温度与功耗（Pro） |
+| CPU | Usage, frequency and optional short processor model; temperature and power (Pro) / 使用率、频率与可选精简处理器型号；温度与功耗（Pro） |
 | GPU | Usage, VRAM and frequency; temperature, power and model (Pro) / 使用率、显存与频率；温度、功耗与型号（Pro） |
 | iGPU | Usage, shared-memory VRAM, frequency and power (Pro), with temperature derived from CPU temperature when no sensor exists / 核显使用率、共享内存显存、频率与功耗（Pro）；无独立温度传感器时按 CPU 温度推算 |
 | Memory | Usage, capacity, speed and modules / 内存占用、容量、速度及内存模块 |
@@ -62,8 +98,11 @@ For complete product information, visit the official website:
 - Real-time performance data at a glance  
   一眼查看整机实时性能状态
 
-- Card and capsule layouts  
-  卡片与胶囊两种布局
+- Card, capsule, taskbar (Pro) and Minimal HUD (both editions) display modes<br>
+  卡片、胶囊、任务栏（Pro）与极简 HUD（两版均可用）四种显示模式
+
+- Minimal HUD stays on one row with up to three pinned hardware items and rotates the rest every five seconds; click to expand<br>
+  极简 HUD 单行显示，最多固定 3 个硬件，其余项目每 5 秒轮播；点击即可展开
 
 - Multiple theme presets  
   多套主题预设
@@ -71,8 +110,20 @@ For complete product information, visit the official website:
 - Glow, transparency, independent text scaling and panel scale up to 3.0<br>
   辉光、透明度、独立文字缩放与最高 3.0 的面板缩放
 
+- Settings search and full keyboard control (`Ctrl+K`, `Tab`, arrows, `Space` / `Enter`)<br>
+  设置搜索与完整键盘操作（`Ctrl+K`、`Tab`、方向键、`Space` / `Enter`）
+
+- Always on top (enabled by default) and an optional short processor model<br>
+  永久置顶（默认开启）与可选处理器精简型号
+
+- Light-background adaptation and automatic tray-icon recovery after Explorer restarts<br>
+  亮背景自动适配，Explorer 重启后自动恢复托盘图标
+
 - Uniform 2% slider precision and per-item taskbar overflow<br>
   滑动条统一 2% 行程精度，任务栏空间不足时按子项截断
+
+- Smart taskbar placement avoiding Start, app icons and the system tray (Pro)<br>
+  任务栏默认位置避开开始按钮、应用图标与系统托盘（Pro）
 - Freely draggable overlay with edge/corner snapping; position remembered per display
   悬浮窗可自由拖拽(边缘 / 四角吸附),按显示器记忆位置
 
@@ -120,10 +171,18 @@ StatViewer Pro unlocks advanced monitoring and customization features.
 | Device authorization migration / 设备授权迁移 | — | ✓ |
 | In-app updates / 应用内更新（测速、亮点、后台下载、托盘提醒） | — | ✓ |
 | Card layout / 卡片布局 | ✓ | ✓ |
+| Minimal HUD / 极简 HUD | ✓ | ✓ |
 | Capsule layout / 胶囊布局 | — | ✓ |
+| Taskbar panel with smart placement / 任务栏模式与智能避让 | — | ✓ |
 | Default theme / 默认主题 | ✓ | ✓ |
 | Theme switching / 主题切换 | — | ✓ |
 | Glow, opacity, panel scale & independent text scale / 辉光、透明度、面板缩放与独立文字缩放 | ✓ | ✓ |
+| Always on top / 永久置顶 | ✓ | ✓ |
+| Short processor model / 处理器精简型号 | ✓ | ✓ |
+| Settings search & full keyboard control / 设置搜索与完整键盘操作 | ✓ | ✓ |
+| Light-background adaptation / 亮背景自动适配 | ✓ | ✓ |
+| Autostart on first install / 首次安装默认开机自启 | ✓ | ✓ |
+| Tray icon recovery after Explorer restart / 托盘图标恢复 | ✓ | ✓ |
 | 2% slider precision & per-item taskbar overflow / 2% 滑杆精度与任务栏子项截断 | ✓ | ✓ |
 | Hardware information centre / 硬件信息中心 | ✓ | ✓ |
 | SMART health & details (Pro; NVMe requires Microsoft standard storage driver) / SMART 健康度与详情（Pro；NVMe 需 Microsoft 标准存储驱动） | — | ✓ |
@@ -298,9 +357,9 @@ Download the NSIS or MSI package and run the installer.
 
 下载 NSIS 或 MSI 安装包并运行安装程序。
 
-The installer provides Start Menu and Desktop shortcuts. Pro also supports in-app speed-tested updates with progress, background downloads and tray reminders.
+The installer provides Start Menu and Desktop shortcuts. NSIS upgrades reuse the existing install path and offer a Default path button; changing directories removes the previous installation first. Unsafe folders require separate confirmation and manual administrator approval at every launch, and no-UAC elevation tasks are kept in sync with the actual directory permissions. Pro also supports in-app speed-tested updates with progress, background downloads and tray reminders.
 
-安装程序会创建开始菜单与桌面快捷方式。Pro 还支持应用内测速更新、进度显示、后台下载与托盘提醒。
+安装程序会创建开始菜单与桌面快捷方式。NSIS 覆盖安装会沿用已有安装路径，并提供「默认路径」按钮；切换安装目录前先卸载旧版本。选择非安全目录时会独立提示并二次确认，安装后每次启动都需要手动授权管理员权限；免 UAC 提权任务会按实际目录权限同步维护。Pro 还支持应用内测速更新、进度显示、后台下载与托盘提醒。
 
 ### Pro Portable / Pro 便携版
 
@@ -343,9 +402,9 @@ Complete release history and changelogs are available here:
 
 ## About / 关于
 
-StatViewer is an independent Windows application developed by two developers: [Kris Lyu](https://github.com/KrisShin) and [Elyven](https://github.com/liuyashoot).
+StatViewer is an independent Windows application developed by two developers: [Kris](https://github.com/KrisShin) and [Elyven](https://github.com/liuyashoot).
 
-StatViewer 是一款独立开发的 Windows 应用程序,由 [Kris Lyu](https://github.com/KrisShin) 与 [Elyven](https://github.com/liuyashoot) 两人共同开发。
+StatViewer 是一款独立开发的 Windows 应用程序,由 [Kris](https://github.com/KrisShin) 与 [Elyven](https://github.com/liuyashoot) 两人共同开发。
 
 **StatViewer Standard and StatViewer Pro are two editions of the same product,
 distributed through different channels with different feature sets.**
