@@ -15,6 +15,18 @@ settings, release highlights, mirror speed tests, background downloads and tray 
 
 ## Recent Updates / 近期更新
 
+### v1.5.4
+
+**中文**
+
+- 优化保存日志，增加安装环境诊断。
+- 优化安全事件告警。
+
+**English**
+
+- Improved log saving with installation-environment diagnostics.
+- Improved security-event alerts.
+
 ### v1.5.3
 
 **中文**
@@ -137,10 +149,10 @@ the system, CPU, memory, GPU, disk, network and other major hardware components.
 
 StatViewer 提供独立的硬件信息中心，用于查看系统、CPU、内存、显卡、磁盘、网络等主要硬件组件。
 
-### System Tools & Logs / 系统工具与日志
+### System Tools & Diagnostics / 系统工具与诊断
 
 - Windows Disk Cleanup for the system drive, optionally pinned to the tray menu / 一键调起系统盘 Windows 磁盘清理，可固定到托盘菜单
-- Save the log files from the About page for troubleshooting / 关于页可直接导出日志文件，便于反馈排障
+- Save a diagnostics ZIP from the About page for support and troubleshooting / 关于页可保存诊断 ZIP，便于反馈与排障
 - In-app updates with release highlights, mirror speed tests, progress and background download / 应用内更新提供版本亮点、镜像测速、进度与后台下载
 - Windows screenshot and screen-recording compatibility / 兼容 Windows 截图与录屏
 
@@ -189,7 +201,7 @@ StatViewer Pro unlocks advanced monitoring and customization features.
 | Drag overlay & per-display position / 悬浮窗拖拽与按屏位置记忆 | ✓ | ✓ |
 | Reorder panel readings by drag / 面板读数拖拽排序 | ✓ | ✓ |
 | Tools: Windows Disk Cleanup & tray pin / 工具：Windows 磁盘清理与托盘固定 | ✓ | ✓ |
-| Save recent logs / 保存最近日志 | ✓ | ✓ |
+| Save diagnostics / 保存诊断日志 | ✓ | ✓ |
 | Announcement bar / 公告条 | — | ✓ |
 
 > Features may change as StatViewer evolves.  
@@ -307,15 +319,15 @@ For complete privacy details, please refer to the official privacy policy.
 
 ### StatViewer Pro
 
-**Latest Release / 最新版本：`v1.5.3`**
+**Latest Release / 最新版本：`v1.5.4`**
 
 | Edition / 版本 | Format / 格式 | Architecture / 架构 | GitHub | Gitee |
 |---|---|---|---|---|
-| Installer / 安装版 | NSIS | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.5.3-x64.exe) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.3/StatViewer-Pro-installer-v1.5.3-x64.exe) |
-| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.5.3-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.3/StatViewer-Pro-installer-v1.5.3-x64.msi) |
-| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.5.3-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.3/StatViewer-Pro-portable-v1.5.3-x64.zip) |
+| Installer / 安装版 | NSIS | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.5.4-x64.exe) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.4/StatViewer-Pro-installer-v1.5.4-x64.exe) |
+| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.5.4-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.4/StatViewer-Pro-installer-v1.5.4-x64.msi) |
+| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.5.4-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.4/StatViewer-Pro-portable-v1.5.4-x64.zip) |
 
-**SHA256 Checksums / SHA256 校验文件：** [GitHub](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/SHA256SUMS-Pro.txt) · [Gitee](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.3/SHA256SUMS-Pro.txt)
+**SHA256 Checksums / SHA256 校验文件：** [GitHub](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/SHA256SUMS-Pro.txt) · [Gitee](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.4/SHA256SUMS-Pro.txt)
 
 ### Verify Downloads / 校验下载
 
@@ -324,7 +336,7 @@ Each public Pro package has an accompanying `.sha256` file, and all hashes are a
 每个公开 Pro 安装包都附带 `.sha256` 文件，所有哈希也会汇总到 `SHA256SUMS-Pro.txt`。可使用 PowerShell 计算下载文件的哈希并与官方校验文件对比；哈希一致即可确认该文件与官方仓库公开发布的文件相同，与下载渠道无关。
 
 ```powershell
-Get-FileHash .\StatViewer-Pro-installer-v1.5.3-x64.exe -Algorithm SHA256
+Get-FileHash .\StatViewer-Pro-installer-v1.5.4-x64.exe -Algorithm SHA256
 ```
 
 > This repository provides the official public releases of **StatViewer Pro**.
