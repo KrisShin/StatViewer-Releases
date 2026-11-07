@@ -15,6 +15,26 @@ settings, release highlights, mirror speed tests, background downloads and tray 
 
 ## Recent Updates / 近期更新
 
+### v1.5.5
+
+**中文**
+
+- 新增联网北京时间、日期、亚秒精度与开机时长，覆盖卡片、极简 HUD、胶囊和任务栏，并修复动画期间时间暂停。
+- 新增悬浮窗与任务栏解锁侧栏，侧栏图标更直观，可直接拖动和缩放面板；Pro 任务栏面板也支持直接移动和缩放。
+- 新增托盘图标隐藏设置；应用内更新支持系统通知展示版本亮点和后台下载。
+- Pro 新增 CPU、显卡与机箱风扇监控，并修复部分 NVIDIA 驱动功耗不可读。
+- 修复网卡识别、设置能力状态、胶囊换行、极简 HUD 轻点、面板编辑态和设置退出确认等问题。
+- 优化重启和长时间休眠后的时间校验误报，减少无效安全事件。
+
+**English**
+
+- Added online Beijing time, date, sub-second precision and uptime across cards, Minimal HUD, capsule and taskbar modes, with animation-related clock stalls fixed.
+- Added a shared unlock rail with clearer icons for direct panel dragging and resizing; Pro taskbar panels can also be moved and resized directly.
+- Added a tray-icon hide option, release highlights in update notifications, and background optional downloads.
+- Pro: added CPU, GPU and chassis fan monitoring, and fixed unreadable power on some NVIDIA drivers.
+- Fixed adapter detection, capability-state sync, capsule wrapping, Minimal HUD clicks, panel edit state and Settings exit confirmation.
+- Reduced false time-check reports after reboot and long sleep.
+
 ### v1.5.4
 
 **中文**
@@ -26,40 +46,6 @@ settings, release highlights, mirror speed tests, background downloads and tray 
 
 - Improved log saving with installation-environment diagnostics.
 - Improved security-event alerts.
-
-### v1.5.3
-
-**中文**
-
-- 新增「极简 HUD」：单行显示，最多固定 3 个硬件，其余项目每 5 秒轮播；点击展开完整看板，设置窗口和托盘菜单均可切换。
-- 设置窗口新增搜索与完整键盘操作：`Ctrl+K` 搜索，`Tab` / `Shift+Tab` 移动焦点，方向键调整选项，`Space` / `Enter` 确认。
-- 重新整理设置与布局：显示模式位于监控页顶部，面板顺序支持跨行拖拽；新增默认开启的「永久置顶」和处理器精简型号。
-- 提升非午夜主题的次要文字对比度，修正圆 `i` 提示和滑杆轨道交互；Explorer 重启后自动恢复托盘图标。
-- 修复滑杆最小显示单位、显示模式切换位置跳动、默认顺序、面板宽度调整崩溃及游戏全屏位置错位。
-- Pro：任务栏默认位置避开开始按钮、应用图标和系统托盘；NSIS 覆盖安装沿用已有路径，改进目录切换、非安全目录确认和免 UAC 提权任务处理。
-
-**English**
-
-- Added Minimal HUD: one row with up to three pinned hardware items, rotating the rest every five seconds; click to expand, and switch layouts from Settings or the tray.
-- Added Settings search and full keyboard control: `Ctrl+K`, `Tab` / `Shift+Tab`, arrow-key choices and `Space` / `Enter` confirmation.
-- Reorganized Settings and layout controls: display mode is at the top of Monitoring, panel ordering supports cross-row drag, and always-on-top plus short processor model options are available.
-- Improved secondary-text contrast, round-`i` tooltips and slider-track interaction in non-Midnight themes; the tray icon is restored after Explorer restarts.
-- Fixed minimum slider steps, panel jumps when switching modes, default ordering, width-resize crashes and overlay placement after fullscreen resolution changes.
-- Pro: taskbar placement avoids Start, app icons and the system tray; NSIS upgrades reuse the existing path and improve directory changes, unsafe-folder confirmation and no-UAC elevation-task handling.
-
-### v1.5.2
-
-**中文**
-
-- 新增应用内更新、面板读数拖拽排序、亮背景自动适配、面板缩放至 3.0 与独立文字缩放。
-- 改善全屏游戏、Windows 截图/录屏兼容与任务栏主题及溢出布局。
-- 首次安装默认开启开机自启，并优化首次启动位置与弹窗交互。
-
-**English**
-
-- Added in-app updates, drag-to-reorder readings, light-background adaptation, panel scale up to 3.0 and independent text scaling.
-- Improved fullscreen-game compatibility, Windows screenshot and screen-recording behaviour, and taskbar theming and overflow layout.
-- Fresh installs now enable autostart by default, with improved first-run placement and dialog interaction.
 
 ---
 
@@ -121,6 +107,9 @@ For complete product information, visit the official website:
 
 - Glow, transparency, independent text scaling and panel scale up to 3.0<br>
   辉光、透明度、独立文字缩放与最高 3.0 的面板缩放
+
+- Unlock rail for quick Settings, always-on-top, hide and lock actions, with direct drag and resize after unlocking<br>
+  解锁操作侧栏可快速打开设置、切换置顶、隐藏或锁定；解锁后可直接拖动与缩放
 
 - Settings search and full keyboard control (`Ctrl+K`, `Tab`, arrows, `Space` / `Enter`)<br>
   设置搜索与完整键盘操作（`Ctrl+K`、`Tab`、方向键、`Space` / `Enter`）
@@ -199,9 +188,12 @@ StatViewer Pro unlocks advanced monitoring and customization features.
 | Hardware information centre / 硬件信息中心 | ✓ | ✓ |
 | SMART health & details (Pro; NVMe requires Microsoft standard storage driver) / SMART 健康度与详情（Pro；NVMe 需 Microsoft 标准存储驱动） | — | ✓ |
 | Drag overlay & per-display position / 悬浮窗拖拽与按屏位置记忆 | ✓ | ✓ |
+| Unlock action rail / 解锁操作侧栏 | ✓ | ✓ |
+| Move and resize the taskbar panel directly / 任务栏面板直接移动与缩放 | — | ✓ |
 | Reorder panel readings by drag / 面板读数拖拽排序 | ✓ | ✓ |
 | Tools: Windows Disk Cleanup & tray pin / 工具：Windows 磁盘清理与托盘固定 | ✓ | ✓ |
 | Save diagnostics / 保存诊断日志 | ✓ | ✓ |
+| Pro fan-speed monitoring / Pro 风扇转速监控 | — | ✓ |
 | Announcement bar / 公告条 | — | ✓ |
 
 > Features may change as StatViewer evolves.  
@@ -319,15 +311,15 @@ For complete privacy details, please refer to the official privacy policy.
 
 ### StatViewer Pro
 
-**Latest Release / 最新版本：`v1.5.4`**
+**Latest Release / 最新版本：`v1.5.5`**
 
 | Edition / 版本 | Format / 格式 | Architecture / 架构 | GitHub | Gitee |
 |---|---|---|---|---|
-| Installer / 安装版 | NSIS | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.5.4-x64.exe) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.4/StatViewer-Pro-installer-v1.5.4-x64.exe) |
-| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.5.4-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.4/StatViewer-Pro-installer-v1.5.4-x64.msi) |
-| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.5.4-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.4/StatViewer-Pro-portable-v1.5.4-x64.zip) |
+| Installer / 安装版 | NSIS | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.5.5-x64.exe) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.5/StatViewer-Pro-installer-v1.5.5-x64.exe) |
+| Installer / 安装版 | MSI | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-installer-v1.5.5-x64.msi) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.5/StatViewer-Pro-installer-v1.5.5-x64.msi) |
+| Portable / 便携版 | ZIP | x64 | [Download](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/StatViewer-Pro-portable-v1.5.5-x64.zip) | [Download](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.5/StatViewer-Pro-portable-v1.5.5-x64.zip) |
 
-**SHA256 Checksums / SHA256 校验文件：** [GitHub](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/SHA256SUMS-Pro.txt) · [Gitee](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.4/SHA256SUMS-Pro.txt)
+**SHA256 Checksums / SHA256 校验文件：** [GitHub](https://github.com/KrisShin/StatViewer-Releases/releases/latest/download/SHA256SUMS-Pro.txt) · [Gitee](https://gitee.com/KrisShin/stat-viewer-releases/releases/download/v1.5.5/SHA256SUMS-Pro.txt)
 
 ### Verify Downloads / 校验下载
 
@@ -336,7 +328,7 @@ Each public Pro package has an accompanying `.sha256` file, and all hashes are a
 每个公开 Pro 安装包都附带 `.sha256` 文件，所有哈希也会汇总到 `SHA256SUMS-Pro.txt`。可使用 PowerShell 计算下载文件的哈希并与官方校验文件对比；哈希一致即可确认该文件与官方仓库公开发布的文件相同，与下载渠道无关。
 
 ```powershell
-Get-FileHash .\StatViewer-Pro-installer-v1.5.4-x64.exe -Algorithm SHA256
+Get-FileHash .\StatViewer-Pro-installer-v1.5.5-x64.exe -Algorithm SHA256
 ```
 
 > This repository provides the official public releases of **StatViewer Pro**.
