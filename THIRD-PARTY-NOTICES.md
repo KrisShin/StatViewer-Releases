@@ -17,7 +17,7 @@ StatViewer 以**未修改的官方安装器**形式随包分发 PawnIO，不链�
 
 ## PawnIO 模块
 
-- 文件：`pawnio-modules/AMDFamily17.bin`、`IntelMSR.bin`
+- 文件：`pawnio-modules/AMDFamily17.bin`、`IntelMSR.bin`、`LpcIO.bin`
 - 版权：Copyright (C) namazso 及 PawnIO.Modules 贡献者
 - 许可证：**GNU LGPL v2.1**
 - 来源：https://github.com/namazso/PawnIO.Modules
