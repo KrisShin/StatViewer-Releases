@@ -3,10 +3,10 @@
 > 轻量、实时、专注的 Windows 硬件与性能监控工具。普通版完全离线；Pro 版仅在激活、授权校验、版本检查、公告拉取、用户主动发起应用内更新下载及可选邮箱账号操作时联网，无广告、无遥测。<br>
 > A lightweight, real-time and focused hardware & performance monitor for Windows. Standard is fully offline; Pro connects only for activation, authorization checks, version checks, announcements, user-initiated in-app update downloads and optional email-account actions — no ads, no telemetry.
 
-StatViewer 通过桌面悬浮窗实时展示 CPU、GPU、内存、磁盘、网络、电池与 FPS 等关键数据，
+StatViewer 通过桌面悬浮窗实时展示 CPU、GPU、内存、磁盘、网络、电池、外设电量与 FPS 等关键数据，
 支持卡片、胶囊、任务栏与极简 HUD 四种显示模式，并提供可搜索的键盘操作设置、版本亮点、镜像测速、后台下载与托盘更新入口。
 
-StatViewer provides real-time CPU, GPU, memory, disk, network, battery and FPS metrics
+StatViewer provides real-time CPU, GPU, memory, disk, network, battery, peripheral-battery and FPS metrics
 in a desktop overlay, with card, capsule, taskbar and Minimal HUD display modes, keyboard-searchable
 settings, release highlights, mirror speed tests, background downloads and tray update actions.
 
@@ -14,6 +14,24 @@ settings, release highlights, mirror speed tests, background downloads and tray 
 **StatViewer is not a system manager or optimizer. It focuses on real-time monitoring.**
 
 ## Recent Updates / 近期更新
+
+### v1.5.6
+
+**中文**
+
+- 新增外设电量监控，支持蓝牙、经典蓝牙和 2.4G 无线鼠标、键盘、耳机等设备；离线或读不到电量的设备不显示。
+- 设置 → 监控新增外设电量组，可逐设备切换完整名称 / 类型图标、连接方式和是否显示，并直接拖拽排序。
+- 面板将多台外设合并到同一行，使用与 CPU 明细相同的圆点分隔；隐藏名称时显示对应设备类型图标。
+- 硬件信息中心新增逐物理核心状态表，显示核心占用、频率、可用功耗与温度。
+- 统一监控页拖拽动画与交互，并修正部分 ITE / Nuvoton 主板风扇转速、通道缺失和接口名称不稳定问题。
+
+**English**
+
+- Added peripheral-battery monitoring for Bluetooth, classic Bluetooth and 2.4 GHz wireless mice, keyboards and headsets; offline devices or devices without a readable level are hidden.
+- Added per-device controls in Settings → Monitoring for full name or type icon, connection type and panel visibility, plus direct drag-to-reorder.
+- The panel now shares one row for all visible peripherals and uses the same round separator as CPU details; hiding a name switches to the matching device-type icon.
+- Added a per-physical-core status table to the hardware centre, with usage, clock, available power and temperature.
+- Unified monitoring-page drag animations and interactions, and fixed incorrect or missing fan readings, skipped channels and unstable header names on some ITE / Nuvoton motherboards.
 
 ### v1.5.5
 
@@ -85,6 +103,7 @@ For complete product information, visit the official website:
 | Disk | Capacity, read/write speed, temperature and hardware information; SMART health & details when readable (Pro; NVMe requires Microsoft standard storage driver) / 容量、读写速度、温度及硬件信息；可读取时提供 SMART 健康度与属性详情（Pro；NVMe 需 Microsoft 标准存储驱动） |
 | Network | Real-time traffic per adapter, with IPv4/IPv6 details in the Hardware Information page / 按网卡显示实时速率；硬件信息页提供 IPv4/IPv6 明细 |
 | Battery | Status, capacity and health information / 电池状态、容量及健康信息 |
+| Peripheral Battery | Bluetooth, classic Bluetooth and 2.4 GHz wireless device battery, with per-device name/icon, connection type, visibility and ordering controls / 蓝牙、经典蓝牙与 2.4G 无线设备电量；按设备控制名称 / 图标、连接方式、显示状态与顺序 |
 | System Power | Estimated total system power consumption (Pro) / 整机功耗估算（Pro） |
 | FPS | Foreground-application FPS, 1% Low and sparkline (Pro; requires administrator; ETW host starts only while FPS and at least one FPS detail are enabled) / 前台应用 FPS、1% Low 与迷你曲线（Pro；需管理员；仅 FPS 与至少一个 FPS 子项启用期间启动 ETW Host） |
 | Account | Optional email account (recommended, not required), email verification, security-notification toggle, device remark and recovery / 可选邮箱账号（推荐绑定，但不强制）、邮箱验证、安全通知开关、设备备注与原邮箱恢复 |
@@ -166,6 +185,7 @@ StatViewer Pro unlocks advanced monitoring and customization features.
 | Disk monitoring / 磁盘监控 | ✓ | ✓ |
 | Network monitoring & IPv4/IPv6 details / 网络监控与 IPv4/IPv6 明细 | ✓ | ✓ |
 | Battery monitoring / 电池监控 | ✓ | ✓ |
+| Peripheral-battery monitoring / 外设电量监控 | ✓ | ✓ |
 | System power estimate / 整机功耗估算 | — | ✓ |
 | FPS, 1% Low & sparkline / FPS、1% Low 与曲线 | — | ✓ |
 | Optional email account (recommended, not required) / 可选邮箱账号（推荐绑定，不强制） | — | ✓ |
@@ -190,7 +210,7 @@ StatViewer Pro unlocks advanced monitoring and customization features.
 | Drag overlay & per-display position / 悬浮窗拖拽与按屏位置记忆 | ✓ | ✓ |
 | Unlock action rail / 解锁操作侧栏 | ✓ | ✓ |
 | Move and resize the taskbar panel directly / 任务栏面板直接移动与缩放 | — | ✓ |
-| Reorder panel readings by drag / 面板读数拖拽排序 | ✓ | ✓ |
+| Reorder panel readings and peripherals by drag / 面板读数与外设拖拽排序 | ✓ | ✓ |
 | Tools: Windows Disk Cleanup & tray pin / 工具：Windows 磁盘清理与托盘固定 | ✓ | ✓ |
 | Save diagnostics / 保存诊断日志 | ✓ | ✓ |
 | Pro fan-speed monitoring / Pro 风扇转速监控 | — | ✓ |
