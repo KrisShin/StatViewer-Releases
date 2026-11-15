@@ -24,6 +24,8 @@ settings, release highlights, mirror speed tests, background downloads and tray 
 - 面板将多台外设合并到同一行，使用与 CPU 明细相同的圆点分隔；隐藏名称时显示对应设备类型图标。
 - 硬件信息中心新增逐物理核心状态表，显示核心占用、频率、可用功耗与温度。
 - 统一监控页拖拽动画与交互，并修正部分 ITE / Nuvoton 主板风扇转速、通道缺失和接口名称不稳定问题。
+- 外设电量图标扩展为 14 类，新增智能手表、摄像头、智能家居、显示器 / TV、追踪器、健康设备和通用蓝牙；重绘鼠标、键盘等图标，提升小尺寸辨识度。
+- 改善无线外设休眠与重连体验：键鼠短暂休眠时保留上次电量，避免频繁显示未知或下线；应用启动时更快恢复上次设备电量。
 
 **English**
 
@@ -32,6 +34,8 @@ settings, release highlights, mirror speed tests, background downloads and tray 
 - The panel now shares one row for all visible peripherals and uses the same round separator as CPU details; hiding a name switches to the matching device-type icon.
 - Added a per-physical-core status table to the hardware centre, with usage, clock, available power and temperature.
 - Unified monitoring-page drag animations and interactions, and fixed incorrect or missing fan readings, skipped channels and unstable header names on some ITE / Nuvoton motherboards.
+- Expanded peripheral-battery icons to 14 device types, including smartwatches, webcams, smart-home devices, displays, trackers, health devices and generic Bluetooth, and redrew mouse and keyboard marks for small sizes.
+- Improved wireless-peripheral sleep and reconnect behaviour: short sleep periods keep the last reading instead of showing unknown or disappearing, and previous device levels return faster after launch.
 
 ### v1.5.5
 
@@ -52,18 +56,6 @@ settings, release highlights, mirror speed tests, background downloads and tray 
 - Pro: added CPU, GPU and chassis fan monitoring, and fixed unreadable power on some NVIDIA drivers.
 - Fixed adapter detection, capability-state sync, capsule wrapping, Minimal HUD clicks, panel edit state and Settings exit confirmation.
 - Reduced false time-check reports after reboot and long sleep.
-
-### v1.5.4
-
-**中文**
-
-- 优化保存日志，增加安装环境诊断。
-- 优化安全事件告警。
-
-**English**
-
-- Improved log saving with installation-environment diagnostics.
-- Improved security-event alerts.
 
 ---
 
@@ -103,7 +95,7 @@ For complete product information, visit the official website:
 | Disk | Capacity, read/write speed, temperature and hardware information; SMART health & details when readable (Pro; NVMe requires Microsoft standard storage driver) / 容量、读写速度、温度及硬件信息；可读取时提供 SMART 健康度与属性详情（Pro；NVMe 需 Microsoft 标准存储驱动） |
 | Network | Real-time traffic per adapter, with IPv4/IPv6 details in the Hardware Information page / 按网卡显示实时速率；硬件信息页提供 IPv4/IPv6 明细 |
 | Battery | Status, capacity and health information / 电池状态、容量及健康信息 |
-| Peripheral Battery | Bluetooth, classic Bluetooth and 2.4 GHz wireless device battery, with per-device name/icon, connection type, visibility and ordering controls / 蓝牙、经典蓝牙与 2.4G 无线设备电量；按设备控制名称 / 图标、连接方式、显示状态与顺序 |
+| Peripheral Battery | Bluetooth, classic Bluetooth and 2.4 GHz wireless device battery with 14 device-type icons, sleep/cache handling, and per-device name/icon, connection, visibility and ordering controls / 蓝牙、经典蓝牙与 2.4G 无线设备电量；14 类设备图标、休眠缓存，以及按设备控制名称 / 图标、连接方式、显示状态与顺序 |
 | System Power | Estimated total system power consumption (Pro) / 整机功耗估算（Pro） |
 | FPS | Foreground-application FPS, 1% Low and sparkline (Pro; requires administrator; ETW host starts only while FPS and at least one FPS detail are enabled) / 前台应用 FPS、1% Low 与迷你曲线（Pro；需管理员；仅 FPS 与至少一个 FPS 子项启用期间启动 ETW Host） |
 | Account | Optional email account (recommended, not required), email verification, security-notification toggle, device remark and recovery / 可选邮箱账号（推荐绑定，但不强制）、邮箱验证、安全通知开关、设备备注与原邮箱恢复 |
