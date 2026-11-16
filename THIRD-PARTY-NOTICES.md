@@ -43,6 +43,32 @@ StatViewer 以**未修改的官方安装器**形式随包分发 PawnIO，不链�
 
 界面使用 **Microsoft YaHei UI**，为 Windows 自带的系统字体，**不随本软件分发**。
 
+## Halo Battery（协议移植参考）
+
+- 项目：Halo Battery 1.15.0
+- 版权：Copyright (C) Halo Battery contributors
+- 许可证：**MIT**
+- 项目主页：https://github.com/HeyOkay/HaloBattery
+
+`src/collect/peripherals/providers/` 下多个厂商协议实现（Corsair、HyperX、ASUS、
+SteelSeries、Razer 等）移植自该项目的 `providers/*.py`：报文格式、字节偏移、
+设备型号表与协议时序按其实现逐一对应，Rust 侧代码为独立编写。每个移植文件
+头部保留出处与 MIT 许可声明；本项目不属于 Halo Battery 的衍生分发品，
+上述署名出于对原作者的尊重。
+
+## MyFinder Device Battery（协议事实参考）
+
+- 项目：MyFinder Device Battery
+- 版权：Copyright (C) wushuai0802
+- 许可证：**AGPL-3.0-only**
+- 项目主页：https://github.com/wushuai0802/myfinder-device-battery
+
+`g3m`、`vgn_dragonfly3`、`vgn_keyboard`、`eweadn`、`cherry`、`atk_headset`
+六个 provider **不包含该项目的任何代码**。仅采用其公开记录的协议事实（厂商与
+产品 ID、目标 HID 集合、请求字节、回复偏移与校验条件），Rust 实现为本项目
+按自身 `Hid`/`HidSystem` 抽象独立编写。该项目的 AGPL-3.0 许可证不延伸至
+仅参考协议事实的独立实现；此处署名用于标明事实来源。
+
 ## 开源许可
 
 本项目自身为闭源商业软件（普通版免费，Pro 版付费授权）。
